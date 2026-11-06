@@ -47,6 +47,12 @@ createServer((req, res) => {
     res.end();
     return;
   }
+  // GitHub Pages redirects a folder address without its trailing slash; do the same for the mounted games.
+  if (MOUNTS.some((m) => m.prefix !== '/' && `${path}/` === m.prefix)) {
+    res.writeHead(301, { Location: `${path}/${url.search}` });
+    res.end();
+    return;
+  }
   const mount = MOUNTS.find((m) => path.startsWith(m.prefix));
   if (!mount) return send(res, 404, 'not found');
   if (path.endsWith('/')) path += 'index.html';
