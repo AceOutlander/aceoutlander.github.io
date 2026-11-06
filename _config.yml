@@ -1,0 +1,4 @@
+# GitHub Pages builds this repo with Jekyll. Files listed here are kept in the repo but never published on the site.
+exclude:
+  - CLAUDE.md
+  - tools
