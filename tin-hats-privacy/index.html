@@ -86,7 +86,7 @@ a{color:var(--accent-ink);text-underline-offset:3px}
   <main>
     <section class="intro">
       <h1>Tin Hats privacy policy</h1>
-      <p>This page covers the Tin Hats game: the Android app on Google Play and the free browser version on this site. It says what the game keeps, what Google's services inside the Android app collect, and how to delete it. Last updated: 18 November 2026.</p>
+      <p>This page covers the Tin Hats game: the Android app on Google Play and the free browser version on this site. It says what the game keeps, what Google's services inside the Android app collect, and how to delete it. Last updated: 23 November 2026.</p>
       <ul class="toc" aria-label="On this page">
         <li><a href="#short">The short version</a></li>
         <li><a href="#device">On your device</a></li>
@@ -105,8 +105,8 @@ a{color:var(--accent-ink);text-underline-offset:3px}
         <li><strong>No account with us.</strong>The game never asks for your name, email address, phone number, contacts, photos or location.</li>
         <li><strong>No servers of ours.</strong>We run no game servers and no analytics of our own. We never receive your save, your purchases or anything about your device.</li>
         <li><strong>Nothing is sold.</strong>We do not sell or rent data about players, and we have none to sell.</li>
-        <li><strong>Google does three jobs in the Android app.</strong>Payments (Google Play), the optional cloud save (Google Play Games) and the optional ads (Google AdMob). Each is described below.</li>
-        <li><strong>Ads only when you ask.</strong>The game never shows an ad by itself. One plays only when you press "Watch" in the Shop, and nothing is sent to Google's ad service before that.</li>
+        <li><strong>Google does three jobs in the Android app.</strong>Payments (Google Play), the optional cloud save (Google Play Games) and the ads (Google AdMob). Each is described below.</li>
+        <li><strong>Ads, kept rare.</strong>You can choose to watch an ad in the Shop for a few medals. The Android app also shows a full-screen ad now and then when you go back to the map after a battle: never during a battle, never in your first three battles, at most one every three battles. A one-time purchase, Remove Ads, ends those for good. The rules are below.</li>
         <li><strong>You can delete everything.</strong>Uninstall the app or clear its data, and delete the saved game from your Google account. The steps are below.</li>
       </ul>
     </section>
@@ -117,7 +117,7 @@ a{color:var(--accent-ink);text-underline-offset:3px}
       <ul>
         <li><strong>Your save:</strong> missions won, medals, upgrades, call-in charges and your settings.</li>
         <li><strong>Purchase records</strong> (Android app): for each purchase, which item it was, Google Play's order number, the date and the medals given. They make sure a purchase is given once and never lost. They do not hold your name or any payment details.</li>
-        <li><strong>Ad records</strong> (Android app): how many reward ads you watched today, so the daily limit can be kept, and your answer to Google's ad privacy question if you were asked one.</li>
+        <li><strong>Ad records</strong> (Android app): how many reward ads you watched today, so the daily limit can be kept; how many times you have opened the game, how many battles you have finished and when the last full-screen ad was shown, so the limits on those ads can be kept; and your answer to Google's ad privacy question if you were asked one.</li>
       </ul>
       <p>The browser version on this site keeps only the save, in your browser's storage for this site. It has no purchases, no ads and no cloud save.</p>
       <h3>Android's own backup</h3>
@@ -133,14 +133,20 @@ a{color:var(--accent-ink);text-underline-offset:3px}
 
     <section class="card" id="purchases" aria-labelledby="purchases-title">
       <h2 id="purchases-title">Purchases (Android app)</h2>
-      <p>Medal packs and the Cavalier are bought through Google Play. Google handles the payment: the game never sees your card, your billing address or your Google account's email address. Google tells the app only that a purchase was made, which item it was, its order number and its date, and the app checks that message is genuine on your device.</p>
+      <p>Medal packs, the Cavalier and Remove Ads are bought through Google Play. Google handles the payment: the game never sees your card, your billing address or your Google account's email address. Google tells the app only that a purchase was made, which item it was, its order number and its date, and the app checks that message is genuine on your device.</p>
       <p>As the seller of record, we can see orders in the Google Play Console (order number, item, price, country and state), as every developer on Google Play can. We use that only to answer questions about a purchase and to give refunds. Refunds follow Google Play's refund policy. Google's handling of payments is covered by the <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldt=privacynotice" rel="noopener">Google Payments privacy notice</a>.</p>
     </section>
 
     <section class="card" id="ads" aria-labelledby="ads-title">
-      <h2 id="ads-title">Ads (optional, Android app)</h2>
-      <p>The only ads in Tin Hats are reward ads that you choose to watch: press "Watch" in the Shop and you get a few medals for watching one, a few times a day. There are no banners, no ads between missions and no ads that start by themselves. If you never press "Watch", the ad service is never started and nothing is sent to it.</p>
-      <p>The ads come from Google AdMob (the Google Mobile Ads SDK). When you ask for an ad, Google's software in the app collects and sends to Google:</p>
+      <h2 id="ads-title">Ads (Android app)</h2>
+      <p>Tin Hats has two kinds of ad and no others. There are no banners and no ads when the app opens or closes.</p>
+      <ul>
+        <li><strong>Reward ads you choose to watch.</strong> Press "Watch" in the Shop and you get a few medals for watching one, a few times a day. One plays only when you press that button.</li>
+        <li><strong>Full-screen ads between battles, kept rare.</strong> One may be shown when you leave the victory or defeat screen for the campaign map. Never during a battle, a briefing or a purchase. Never in your first session, and never before you have finished more than three battles. At most one every three battles, and never two within ten minutes. How soon such an ad can be closed is set by Google's ad service, usually after a few seconds.</li>
+      </ul>
+      <p><strong>Remove Ads</strong>, a one-time purchase in the Shop, ends the full-screen ads for good, and it comes back when you install the game again. The reward ads stay available and stay your choice.</p>
+      <p>The ad service is not started when you install or open the game. It starts the first time you press "Watch", or, if you have not bought Remove Ads, on the campaign map once a full-screen ad could follow your next battle (from your second session on, after three battles). Before that nothing is sent to it. If you have bought Remove Ads, it starts only when you press "Watch".</p>
+      <p>The ads come from Google AdMob (the Google Mobile Ads SDK). When an ad is fetched or shown, Google's software in the app collects and sends to Google:</p>
       <ul>
         <li>your device's advertising ID and similar device identifiers;</li>
         <li>your IP address, from which Google may estimate your general location (such as your city or region);</li>
@@ -150,8 +156,9 @@ a{color:var(--accent-ink);text-underline-offset:3px}
       <p>Google uses this to show and measure ads, to limit how often you see the same ad, and to prevent fraud. Depending on your choices it may also use it to show ads based on your interests. This is described in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a>. We do not receive this information about you; AdMob shows us only totals, such as how many ads were watched.</p>
       <h3>Your choices</h3>
       <ul>
-        <li><strong>Do not watch ads.</strong> They are never required. Everything in the game can be played without them.</li>
-        <li><strong>The consent question.</strong> In the European Economic Area, the United Kingdom, Switzerland and some US states, Google's form asks for your choice before the first ad. You can change it at any time in the game's Settings under "Ad privacy choices" (the button appears once you have been asked).</li>
+        <li><strong>Remove Ads.</strong> The one-time purchase in the Shop ends the full-screen ads for good.</li>
+        <li><strong>Do not watch reward ads.</strong> They are never required. Everything in the game can be played without them.</li>
+        <li><strong>The consent question.</strong> In the European Economic Area, the United Kingdom, Switzerland and some US states, Google's form asks for your choice before the first ad of either kind is requested: when you first press "Watch", or on the campaign map before the first full-screen ad. You can change it at any time in the game's Settings under "Ad privacy choices" (the button appears once you have been asked).</li>
         <li><strong>Your phone's ad settings.</strong> In Android's settings under Privacy, Ads (or Google, Ads) you can reset or delete your advertising ID, which stops ads based on that ID in every app.</li>
         <li><strong>Your Google account.</strong> <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a> lets you switch personalised ads off.</li>
       </ul>
@@ -173,7 +180,7 @@ a{color:var(--accent-ink);text-underline-offset:3px}
         <li><strong>Ad information held by Google:</strong> reset or delete your advertising ID in Android's settings, and use <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a> and <a href="https://myactivity.google.com/" rel="noopener">My Activity</a> in your Google account.</li>
         <li><strong>Purchase history:</strong> Google keeps your order history in your Google Play account as part of its payment records. We cannot delete it.</li>
       </ul>
-      <p>If you delete the save and the cloud save, medals you have bought are gone with them. The Cavalier stays with your Google Play account and comes back when you install the game again.</p>
+      <p>If you delete the save and the cloud save, medals you have bought are gone with them. The Cavalier and Remove Ads stay with your Google Play account and come back when you install the game again.</p>
     </section>
 
     <section class="card" aria-labelledby="more-title">
