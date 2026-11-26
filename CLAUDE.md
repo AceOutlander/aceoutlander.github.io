@@ -18,6 +18,15 @@ The owner's games site. This repo, `AceOutlander/aceoutlander.github.io`, is the
 | `/tin-hats/` | `tin-hats` (source in the sibling folder `..\tin-hats`) | GitHub Actions builds and publishes it |
 | `/magic-academy/` | `magic-academy` | Pages from `main`; not linked from the home page (the owner's choice, for now) |
 
+## The site account
+
+`account/hace.js` is the one sign-in for every game on the domain, and `account/index.html` is the account page and the
+sign-in prompt games send players to. It is switched off by the `CONFIG` line at the top of `hace.js` until the backend
+is deployed: no button, no prompt, no request. Each game loads it with one small script in its page head
+(`data-game="steel-tide"`, `"bulwark"`, `"tin-hats"`); the games themselves are not changed, the script swaps what is in
+their saves (guest progress and each account's progress are kept apart) and, for Bulwark and Tin Hats, copies the save
+to the account. The backend is the Steel Tide server (private, not in any public repo).
+
 ## Rules
 
 - **Never change anything under `/bulwark/`, and never rename the `bulwark` repo.** Players' saves live in their

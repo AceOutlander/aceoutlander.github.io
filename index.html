@@ -190,6 +190,16 @@ button{font:inherit;color:inherit}
   .game-play:active,.detail-play:active{transform:none}
 }
 </style>
+<style>
+/* the account button in the header: only shown once accounts are switched on (see /account/hace.js) */
+.acct{position:relative;margin-left:auto}
+.site-head .head-pill + .acct{margin-left:0}
+.acct a.in,.acct summary{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;cursor:pointer;list-style:none;max-width:46vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acct summary::-webkit-details-marker{display:none}
+.acct .menu{position:absolute;right:0;top:calc(100% + 6px);z-index:5;min-width:11em;background:#fff;border:1px solid var(--edge);border-radius:12px;box-shadow:0 8px 24px rgba(16,36,58,.18);padding:6px;display:flex;flex-direction:column}
+.acct .menu a,.acct .menu button{font:inherit;text-align:left;padding:12px 12px;border:0;background:none;color:var(--ink);border-radius:8px;text-decoration:none;cursor:pointer}
+.acct .menu a:hover,.acct .menu button:hover{background:var(--pill)}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -199,6 +209,7 @@ button{font:inherit;color:inherit}
       HunterAceDev
     </a>
     <span class="head-pill">Free browser games</span>
+    <span class="acct" id="acct" hidden></span>
   </header>
 
   <main>
@@ -349,5 +360,16 @@ button{font:inherit;color:inherit}
     <span>Made for phones and computers.</span>
   </footer>
 </div>
+<script src="/account/hace.js"></script>
+<script>
+// one account for every game on the site: Sign in, or the signed-in player's email with a small menu
+(function () {
+  var H = window.HACE, box = document.getElementById('acct'); if (!H || !H.enabled || !box) return;
+  var s = H.session(), esc = function (t) { return String(t).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+  box.innerHTML = s ? '<details><summary>' + esc(s.email) + '</summary><div class="menu"><a href="/account/">Account</a><button type="button" id="acct-out">Sign out</button></div></details>' : '<a class="in" href="/account/">Sign in</a>';
+  box.hidden = false;
+  var out = document.getElementById('acct-out'); if (out) out.addEventListener('click', function () { H.signOut().then(function () { location.reload(); }); });
+})();
+</script>
 </body>
 </html>
