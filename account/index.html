@@ -29,6 +29,18 @@ table{width:100%;border-collapse:collapse;margin-top:.5em;font-size:.92em} td,th
 .stat{display:flex;justify-content:space-between;gap:1em;padding:.5em 0;border-bottom:1px solid var(--edge)} .stat span:last-child{font-weight:700}
 h2{font-size:1em;margin:1.4em 0 .2em;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
 a{color:var(--accent)}
+.msg:empty{display:none}
+/* a phone held sideways: little height, and the keyboard takes half of it. Everything tightens, and the form sits at the
+   top (side by side with its text) so it fits. */
+@media (max-height:480px){
+  body{padding:8px;align-items:flex-start}
+  .card{max-width:40em;padding:.7em 1.1em;margin:0 auto}
+  h1{font-size:1.1em;margin-bottom:.2em}
+  .game{margin-bottom:.2em;font-size:.72em} p{margin:.25em 0;font-size:.9em;line-height:1.3}
+  label{margin-top:.35em;font-size:.82em} input{padding:.4em .6em;margin-top:.15em} .row{margin-top:.5em}
+  button,a.btn{min-height:2.75em;padding:.45em 1em}
+  .msg{margin-top:.3em;min-height:0}
+}
 </style>
 </head>
 <body>
